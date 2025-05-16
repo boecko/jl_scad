@@ -1,6 +1,8 @@
 include <BOSL2/std.scad>
 include <BOSL2/rounding.scad>
 
+include <parts/qapass_1602a_led.scad>
+
 module open_round_box(
     size=10,
     rsides=5,
