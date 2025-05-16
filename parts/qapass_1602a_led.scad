@@ -30,7 +30,7 @@ module qapass_1602a_led(anchor=CENTER,spin=0,orient=UP) {
                 for(y = [-holes_dist_y/2,holes_dist_y/2])
                     for(x = [-holes_dist_x/2,holes_dist_x/2])
                         right(x) fwd(y) box_pos() 
-                            standoff(h=h2,od=4,id=2.6,depth = -2, iround=0.25, fillet=2);
+                            standoff(h=h2,od=4,id=2.9,depth = -2, iround=0.25, fillet=2);
 
 
         box_part(TOP) box_cutout(rect(scr_sz,rounding=1),chamfer=0.75);
