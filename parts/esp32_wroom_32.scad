@@ -2,7 +2,7 @@ module esp32_wroom_32(pcb_zofs = 5,anchor=CENTER,spin=0,orient=UP) {
     h = $parent_size.z;
     gap_hole_y=47;
     gap_hole_x=23.5;
-    d_hole=3;
+    d_hole=3.1;
     pcb = [28.5,51.8,1.5];
     usbc = [9,6.5,3.25];
     hole_gap_y=(pcb.y-gap_hole_y)/2;
@@ -44,7 +44,7 @@ module esp32_wroom_32(pcb_zofs = 5,anchor=CENTER,spin=0,orient=UP) {
             up(pcb_zofs+0.001) box_part(BOT,FRONT+LEFT) esp32_preview();
 
             //move([13.75,-0.002,pcb_zofs+usb.z/2+pcb.z]) 
-            up(pcb_zofs-usbc.z/2+pcb.z) position(BOT+FRONT+CENTER) {
+            up(pcb_zofs-usbc.z/2+pcb.z-0.2) position(BOT+FRONT+CENTER) {
                 box_part(FRONT,undef) box_cutout(rect([usbc.x+0.4,usbc.z+0.4],rounding=0.7));
             }
             children();
